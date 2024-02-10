@@ -5,15 +5,15 @@
     </title>
   </head>
   
-  <body style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top: 50%; margin:0;">
+  <body style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding-top: 75%; margin:0;">
     <div style="font-size:2vh; font-weight:900;">
       Do you love me?
     </div>
     <div style="display:flex; flex-direction:row;">
-      <button id="yes" style="font-size: 2vh;">
+      <button id="yes" style="font-size: 2vh; position:absolute; left: 45%; top: 45%;">
       Yes
     </button>
-    <button id="no" style="font-size: 2vh;">
+    <button id="no" style="font-size: 2vh; position:absolute; left:45%; top:50%;">
       No
     </button>
     </div>
@@ -25,8 +25,8 @@
       noButton.addEventListener("click", () => {
       var width = (Math.random() * (window.clientWidth()-noButton.clientWidth))
       var height = (Math.random() * (window.clientHeight()-noButton.clientHeight))
-        noButton.style.width=`${width}px`
-        noButton.style.height=`${height}px`
+        noButton.style.left=`${width}px`
+        noButton.style.top=`${height}px`
       })
       yesButton.addEventListener("click", () => {
         alert("You sure? NOOOOOO")
