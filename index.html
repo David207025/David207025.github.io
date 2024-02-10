@@ -23,10 +23,11 @@
       let noButton = document.getElementById("no")
       let yesButton = document.getElementById("yes")
       noButton.addEventListener("click", () => {
-      var width = (Math.random() * (window.clientWidth()-noButton.clientWidth))
-      var height = (Math.random() * (window.clientHeight()-noButton.clientHeight))
-        noButton.style.left=`${width}px`
-        noButton.style.top=`${height}px`
+      var width = Math.floor(Math.random() * (window.clientWidth()-noButton.clientWidth))
+      var height = Math.floor(Math.random() * (window.clientHeight()-noButton.clientHeight))
+        alert(width+" "+height)
+        noButton.style.left=width+`px`
+        noButton.style.top=height+`px`
       })
       yesButton.addEventListener("click", () => {
         alert("You sure? NOOOOOO")
